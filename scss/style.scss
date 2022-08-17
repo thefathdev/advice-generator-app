@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+@import './normalize';
+
+@import './reset';
+
+:root {
+  // colors
+  --clr-primary: hsl(193, 38%, 86%);
+  --clr-secondary: hsl(150, 100%, 66%);
+  --clr-neutral-700: hsl(218, 23%, 16%);
+  --clr-neutral-500: hsl(217, 19%, 24%);
+  --clr-neutral-300: hsl(217, 19%, 38%);
+
+  // font sizes
+  --fs-400: 1.75rem; // 28px where 1rem == 16px
+
+  // font family
+  --ff-sans: 'Manrope', sans-serif;
+
+  // font weight
+  --fw-extrabold: 800;
+}

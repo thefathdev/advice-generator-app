@@ -56,6 +56,8 @@ body {
   border-radius: 12px;
   background-color: var(--clr-neutral-500);
   color: var(--clr-primary);
+
+  animation: shift-up 300ms ease-in-out both;
 }
 
 .advice-id {
@@ -80,14 +82,40 @@ body {
   padding: 0.85em;
   border-radius: 50%;
   line-height: 0;
+  transition: transform 300ms ease-in-out;
 
   &:hover {
     filter: drop-shadow(0 0 0.75rem var(--clr-secondary));
+  }
+
+  &:active {
+    transform: translateY(50%) scale(0.9);
   }
 }
 
 .divider__desktop {
   display: none;
+}
+
+// TODO: add animation
+.card[data-fulfil='fulfil'] .advice-text,
+.card[data-fulfil='fulfil'] .advice-id > span {
+  animation: shift-up 300ms 100ms ease-in-out both;
+}
+
+@keyframes shift-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  to {
+    transform: none;
+  }
 }
 
 @media screen and (min-width: 36rem) {
